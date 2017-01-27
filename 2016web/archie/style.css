@@ -1,0 +1,27 @@
+body {
+    background-color: lightblue;
+}
+#htmlInput {
+    background-color: orange;
+    color: white;
+    left: 25px;
+    top: 25px;
+    position: absolute;
+    resize: none;
+    border: none;
+}
+#codeOutput {
+    width: 750px;
+    height: 700px;
+    top: 25px;
+    left: 825px;
+    position: absolute;
+    background-color: white;
+}
+#generateButton {
+    top: 725px;
+    left: 825px;
+    position: absolute;
+    border: none;
+    background-color: lawngreen;
+}
