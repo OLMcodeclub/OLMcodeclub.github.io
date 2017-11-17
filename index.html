@@ -38,7 +38,36 @@
             <h3>Classroom Code: skinny-sink</h3>
         <p>Today we are going to give you a sneak peak into Python - a programming language we will be exploring next term. Python is a <a href="https://codeclubprojects.org/en-GB/resources/python-intro/">text based programming language</a> and is used by scientists, engineers, mathematicians etc. The reason for the sneak peak is that we have the opportunity to <a href="https://astro-pi.org/">enter a competition to have our programs run on the International Space Station!!!! <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/edu_iss_earth.jpg"></a> 
 
-   
+        <p><pre><code>
+from sense_hat import SenseHat
+from time import sleep
+from random import randint
+
+sense = SenseHat()
+sense.set_rotation(270)
+
+bc = (0, 0, 205)
+tc = (255,165,0)
+c = 0
+
+sense.clear(bc)
+
+while c < 280:
+  sense.set_pixel(randint(0,7), randint(0,7), randint(0,255), randint(0,255), randint(0,255))
+  c = c + 1
+  sleep(0.03)
+
+t1 = round( sense.get_temperature(), 1 )
+t2 = round( sense.get_temperature_from_pressure(), 3)
+sense.show_message( str(t1) + " C or " + str(t2) + " C" , text_colour=tc, back_colour=bc)
+
+c = 0
+while c < 280:
+  sense.set_pixel(randint(0,7), randint(0,7), randint(0,255), randint(0,255), randint(0,255))
+  c = c + 1
+  sleep(0.03)
+  </code></pre>
+            </p>
       </p>
       <p>Finnbar will do <a href="https://www.youtube.com/watch?v=yjll_4JY98g">an introduction to the Astro-Pi competition</a> using the <a href="https://projects.raspberrypi.org/en/projects/astro-pi-mission-zero/">step by step mission guide</a>.
       </p>
