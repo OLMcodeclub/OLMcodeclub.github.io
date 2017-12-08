@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>OLM Code Club</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/googleanalytics.js"></script>
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>OLM CodeClub</h1>
+            <p>
+                <a href="info.html">Info + Links</a>
+            </p>
+           
+        </header>
+        
+        <section>
+            <a href="https://www.codeclub.org.uk/"><img src="images/logo.svg" align=right width=75px></a>
+<h1>Week 7 - Paint + Competitions <small>10/11/17</small></h1>
+
+        <h3>Christmas competition!</h3>
+        <p>Don't forget, Code Club UK are looking for entries to their Christmas message competition. Entries need to be complete by the end of next weeks Code Club. 
+            <a href="https://www.codeclub.org.uk/competitions"><img src="https://images.contentful.com/livad5mzealc/3hggX9JixGOmwIEC80EGWG/6c24df9a8c26274fb9519bf6260fdbd6/festive_scene.png"></a>
+        </p>
+        <h3>Python and the Astro Pi competition!</h3>
+            <h3>Classroom Code: skinny-sink</h3>
+        <p>Today we are going to give you a sneak peak into Python - a programming language we will be exploring next term. Python is a <a href="https://codeclubprojects.org/en-GB/resources/python-intro/">text based programming language</a> and is used by scientists, engineers, mathematicians etc. The reason for the sneak peak is that we have the opportunity to <a href="https://astro-pi.org/">enter a competition to have our programs run on the International Space Station!!!! <img src="https://www.nasa.gov/sites/default/files/thumbnails/image/edu_iss_earth.jpg"></a> 
+
+        <pre>
+        <code>
+from sense_hat import SenseHat
+from time import sleep
+from random import randint
+
+sense = SenseHat()
+sense.set_rotation(270)
+
+bc = (0, 0, 205)
+tc = (255,165,0)
+c = 0
+
+sense.clear(bc)
+
+while c < 280:
+  sense.set_pixel(randint(0,7), randint(0,7), randint(0,255), randint(0,255), randint(0,255))
+  c = c + 1
+  sleep(0.03)
+
+t1 = round( sense.get_temperature(), 1 )
+t2 = round( sense.get_temperature_from_pressure(), 3)
+sense.show_message( str(t1) + " C or " + str(t2) + " C" , text_colour=tc, back_colour=bc)
+
+c = 0
+while c < 280:
+  sense.set_pixel(randint(0,7), randint(0,7), randint(0,255), randint(0,255), randint(0,255))
+  c = c + 1
+  sleep(0.03)
+  </code>
+  </pre>
+      </p>
+      <p>Finnbar will do <a href="https://www.youtube.com/watch?v=yjll_4JY98g">an introduction to the Astro-Pi competition</a> using the <a href="https://projects.raspberrypi.org/en/projects/astro-pi-mission-zero/">step by step mission guide</a>.
+      </p>
+
+       <h3>Paintbox</h3>
+        <p>If you are working towards getting your Scratch Level 1 certificate then you can continue to work on completing the Paintbox project. Jump to the <a href="https://projects.raspberrypi.org/en/projects/paint-box/" target="_blank">Code Club Projects page and open up paint-box</a>. Don't forget to add your work to the OLM Code Club Studio: <a href="https://scratch.mit.edu/studios/4318422/">https://scratch.mit.edu/studios/4318422/</a>
+         </p>        
+
+         <hr>
+            <h1>Links to previous weeks</h1>
+            <p>
+                <a href="2017/6.html">Week 6 - Paintbox</a>
+                <br>
+                <a href="2017/5.html">Week 5 - Chatbot</a>
+                <br>
+                <a href="2017/4.html">Week 4 - Ghostbusters</a>
+                <br>
+                <a href="2017/3.html">Week 3 - Lost in Space!</a>
+                <br>
+                <a href="2017/2.html">Week 2 - Rock Band!</a>
+                <br>
+                <a href="2017/1.html">Week 1 - OLM Code Club</a>
+                <br>   
+            </p>   
+               
+        </section>
+
+        <footer>
+            <p>
+                OLM Weather Station:<br>
+                <a href="http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=ILONDON582"><img src="http://banners.wunderground.com/cgi-bin/banner/ban/wxBanner?bannertype=wxstnsticker_both&weatherstationcount=ILONDON582" height="160" width="160" border="0" alt="Weather Underground PWS ILONDON582" /></a><br>
+                <a href="https://github.com/OLMcodeclub">View Our GitHub Profile</a><br>
+                <small>Hosted on GitHub Pages<br>
+                Theme by <a href="https://github.com/orderedlist">orderedlist</a></small>
+            </p>
+        </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+</body>
+
+</html>
